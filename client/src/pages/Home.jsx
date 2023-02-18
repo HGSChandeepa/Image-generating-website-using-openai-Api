@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 import { Card, FormField, Loader } from "../components";
 
 const RenderCards = ({ data, title }) => {
-
   // here data?.lenght>0 means if data is true and len >1
   // If both conditions are met, the component maps through data and
   // returns an array of Card components
   //>> finally if the data is true and lenght >0  this will
-  // render an array of CARD components 
+  // render an array of CARD components
   if (data?.length > 0) {
-
     // here the spread operator is used to pass all the properties of the post
     //obj as individual properties to the cars component
     return data.map((post) => <Card key={post._id} {...post} />);
